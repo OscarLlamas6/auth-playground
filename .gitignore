@@ -1,32 +1,92 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# ─── Node / JavaScript / TypeScript ──────────────────────────────────────────
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.output/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.yarn/
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+*.egg-info/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+
+# ─── Go ───────────────────────────────────────────────────────────────────────
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-
-# Test binary, built with `go test -c`
 *.test
-
-# Code coverage profiles and other test artifacts
 *.out
-coverage.*
-*.coverprofile
-profile.cov
+vendor/
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# ─── Rust ─────────────────────────────────────────────────────────────────────
+target/
+Cargo.lock
 
-# Go workspace file
-go.work
-go.work.sum
+# ─── Java / Kotlin / JVM ──────────────────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+.gradle/
+out/
+*.iml
 
-# env file
+# ─── VS Code ──────────────────────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ─── JetBrains (IntelliJ, GoLand, PyCharm…) ──────────────────────────────────
+.idea/
+*.iws
+*.ipr
+cmake-build-*/
+
+# ─── Secrets & credentials ── CRÍTICO para un repo de auth ───────────────────
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.p8
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+secrets/
+credentials/
+.secrets/
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
